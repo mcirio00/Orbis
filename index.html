@@ -1,1 +1,1860 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbis Intelligence — Referendum sulla Giustizia 2026</title>
+<meta name="description" content="Analisi indipendente del referendum costituzionale sulla separazione delle carriere dei magistrati. Testo normativo, claim verificati, scenari, sondaggi, disinformazione. Orbis Intelligence — MC Project Lab.">
+<meta name="keywords" content="referendum giustizia 2026, separazione carriere magistratura, CSM, riforma costituzionale, analisi, orbis intelligence">
+<meta name="author" content="Orbis Intelligence — MC Project Lab">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:title" content="Orbis — Analisi Referendum Giustizia 2026">
+<meta property="og:description" content="Sistema indipendente di analisi e verifica. Testo normativo, claim politici verificati, scenari, sondaggi, disinformazione.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://orbis.mcprojectlab.it">
+<meta property="og:locale" content="it_IT">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orbis — Analisi Referendum Giustizia 2026">
+<meta name="twitter:description" content="Analisi indipendente. Claim verificati, scenari, sondaggi, disinformazione. orbis.mcprojectlab.it">
+<!-- Favicon inline SVG -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231a3a6e'/><text x='4' y='24' font-family='serif' font-size='22' fill='%23c8303a'>O</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#1a3a6e; --paper:#f4f2ed; --muted:#8a8880; --accent:#c8303a;
+  --accent2:#2a5fa8; --border:#d4d0c8; --verified:#2e7d52;
+  --uncertain:#b85c00; --political:#5a4a8a; --warn:#c8303a;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
 
+/* TOPBAR */
+.topbar{background:#0a0c0f;color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;padding:0 32px;position:sticky;top:0;z-index:100}
+.topbar-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:40px;overflow:hidden}
+.topbar-left{display:flex;align-items:center;gap:24px}
+.topbar .logo{font-size:13px;font-weight:600;letter-spacing:.2em}
+.topbar .sep{color:var(--muted)}
+.topbar .module{color:#9aaccc}
+.live-dot{display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.topbar .ts{color:#666}
+
+/* COUNTDOWN */
+.countdown-bar{background:var(--ink);color:var(--paper);padding:28px 0;border-bottom:2px solid var(--accent)}
+.countdown-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+.countdown-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);white-space:nowrap;display:flex;align-items:center;gap:4px}
+.countdown-units{display:flex;gap:24px;align-items:baseline}
+.countdown-unit{text-align:center}
+.countdown-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;line-height:1;display:block;min-width:56px}
+.countdown-lbl{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-top:4px}
+.countdown-sep{font-family:'Cormorant Garamond',serif;font-size:32px;color:rgba(255,255,255,.2);line-height:1;align-self:flex-start;padding-top:6px}
+.countdown-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,.5);margin-left:auto;line-height:1.8}
+.countdown-date strong{color:rgba(255,255,255,.85);display:block;font-size:13px}
+.countdown-expired{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--accent)}
+
+/* HERO */
+.hero{border-bottom:1px solid var(--border);padding:72px 32px 56px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 260px;gap:64px;align-items:end}
+.hero-badge{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.hero-badge::before{content:'';display:block;width:20px;height:1px;background:var(--accent)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,62px);font-weight:300;line-height:1.08;letter-spacing:-.01em;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:15px;color:#555;max-width:520px;line-height:1.65}
+.hero-meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);line-height:2}
+.hero-meta strong{color:var(--ink);font-weight:500;display:block;font-size:13px;margin-bottom:4px}
+
+/* LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
+section{border-bottom:1px solid var(--border);padding:56px 0}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;display:flex;align-items:center;gap:12px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;margin-bottom:24px;line-height:1.2}
+
+/* COLORI PER SEZIONE */
+#sec-inquadramento .section-label { color: #2a5fa8; }
+#sec-inquadramento .section-label::after { background: #2a5fa8; opacity:.3; }
+#sec-inquadramento .section-title { color: #1a3f78; }
+
+#sec-claim .section-label { color: #5a4a8a; }
+#sec-claim .section-label::after { background: #5a4a8a; opacity:.3; }
+#sec-claim .section-title { color: #3d2f6e; }
+
+#sec-scenari .section-label { color: #c8303a; }
+#sec-scenari .section-label::after { background: #c8303a; opacity:.3; }
+#sec-scenari .section-title { color: #a02030; }
+
+#sec-sondaggi .section-label { color: #b85c00; }
+#sec-sondaggi .section-label::after { background: #b85c00; opacity:.3; }
+#sec-sondaggi .section-title { color: #8a4400; }
+
+#sec-news .section-label { color: #4a6741; }
+#sec-news .section-label::after { background: #4a6741; opacity:.3; }
+#sec-news .section-title { color: #2e4d28; }
+
+#sec-costi .section-label { color: #7a5c2a; }
+#sec-costi .section-label::after { background: #7a5c2a; opacity:.3; }
+#sec-costi .section-title { color: #5a4010; }
+
+#sec-europa .section-label { color: #2e7d52; }
+#sec-europa .section-label::after { background: #2e7d52; opacity:.3; }
+#sec-europa .section-title { color: #1a5c38; }
+
+#sec-disinfo .section-label { color: #c8303a; }
+#sec-disinfo .section-label::after { background: #c8303a; opacity:.3; }
+#sec-disinfo .section-title { color: #a02030; }
+
+#sec-voci .section-label { color: #1a3f78; }
+#sec-voci .section-label::after { background: #1a3f78; opacity:.3; }
+#sec-voci .section-title { color: #0d2550; }
+
+#sec-problemi .section-label { color: #7a5c2a; }
+#sec-problemi .section-label::after { background: #7a5c2a; opacity:.3; }
+#sec-problemi .section-title { color: #5a4010; }
+
+#sec-comevotare .section-label { color: #2e7d52; }
+#sec-comevotare .section-label::after { background: #2e7d52; opacity:.3; }
+#sec-comevotare .section-title { color: #1a5c38; }
+
+#sec-glossario .section-label { color: #444; }
+#sec-glossario .section-label::after { background: #444; opacity:.3; }
+#sec-glossario .section-title { color: #222; }
+
+#sec-fonti .section-label { color: #2a5fa8; }
+#sec-fonti .section-label::after { background: #2a5fa8; opacity:.3; }
+#sec-fonti .section-title { color: #1a3f78; }
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+
+/* CARD */
+.card{border:1px solid var(--border);padding:28px;background:#fff;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--border)}
+.card.accent::before{background:var(--accent)}
+.card.blue::before{background:var(--accent2)}
+.card.green::before{background:var(--verified)}
+.card-title{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.card p{font-size:14px;line-height:1.65;color:#333}
+
+/* VERDICT */
+.verdict{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:2px;margin-top:12px}
+.verdict.verified{background:#e8f5ee;color:var(--verified);border:1px solid #b8dfc9}
+.verdict.political{background:#f0eef8;color:var(--political);border:1px solid #c9c4e8}
+.verdict.uncertain{background:#fdf3e8;color:var(--uncertain);border:1px solid #f0d4a8}
+.verdict.warn{background:#fdeaea;color:var(--warn);border:1px solid #f0c4c4}
+.verdict::before{content:'●';font-size:8px}
+
+/* INFO TABLE */
+.info-table{width:100%;border-collapse:collapse}
+.info-table tr{border-bottom:1px solid var(--border)}
+.info-table tr:last-child{border-bottom:none}
+.info-table td{padding:14px 0;vertical-align:top;font-size:14px}
+.info-table td:first-child{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;width:160px;padding-top:16px}
+
+/* CLAIM */
+.claim-block{border-left:2px solid var(--border);padding-left:20px;margin-bottom:28px}
+.claim-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;line-height:1.4;color:var(--ink);margin-bottom:8px}
+.claim-source{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;margin-bottom:8px}
+
+/* SCENARIO */
+.scenario{background:#1a3a6e;color:var(--paper);padding:32px;position:relative;overflow:hidden}
+.scenario h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.scenario h3 span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;padding:3px 8px;border:1px solid rgba(255,255,255,.2);border-radius:2px}
+.scenario ul{list-style:none}
+.scenario ul li{font-size:13px;color:rgba(255,255,255,.75);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);padding-left:16px;position:relative}
+.scenario ul li::before{content:'→';position:absolute;left:0;color:rgba(255,255,255,.3)}
+.scenario ul li strong{color:rgba(255,255,255,.9)}
+
+/* CLASSIFICATION GRID */
+.class-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.class-item{background:#fff;padding:20px 16px;text-align:center}
+.class-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-bottom:10px}
+.class-item .label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:6px;color:var(--ink)}
+.class-item .desc{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* NEWS */
+.news-item{display:grid;grid-template-columns:90px 1fr auto;gap:20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink)}
+.news-item:last-child{border-bottom:none}
+.news-item:hover .news-title{color:var(--accent2)}
+.news-time{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.08em;padding-top:2px;line-height:1.6}
+.news-title{font-size:14px;line-height:1.55}
+.news-source{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;white-space:nowrap;padding-top:3px}
+.news-loading{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);padding:24px 0;display:flex;align-items:center;gap:10px}
+.news-loading::before{content:'';width:8px;height:8px;border:1px solid var(--muted);border-top-color:var(--ink);border-radius:50%;animation:spin .8s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* AFFLUENZA */
+.aff-chart{display:flex;flex-direction:column;gap:0}
+.aff-row{display:grid;grid-template-columns:140px 1fr 60px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+.aff-row:last-child{border-bottom:none}
+.aff-year{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.aff-bar-wrap{height:8px;background:var(--border);border-radius:1px;overflow:hidden}
+.aff-bar{height:100%;border-radius:1px;background:var(--ink);transition:width 1.2s cubic-bezier(.4,0,.2,1);width:0}
+.aff-pct{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;text-align:right}
+.aff-note{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:2px}
+
+/* SONDAGGI */
+.poll-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;gap:16px}
+.poll-refresh-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:8px 16px;border:1px solid var(--border);background:#fff;cursor:pointer;color:var(--ink);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.poll-refresh-btn:hover{background:var(--ink);color:var(--paper)}
+.poll-last-update{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-top:8px;letter-spacing:.08em}
+.poll-nota{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.6;border-top:1px solid var(--border);padding-top:12px}
+.poll-istituti-links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.poll-istituto-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;padding:6px 12px;border:1px solid var(--border);text-decoration:none;color:var(--ink);background:#fff}
+.poll-istituto-tag:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* COSTI */
+.cost-stat{text-align:center;padding:32px 16px;border:1px solid var(--border);background:#fff}
+.cost-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;display:block;color:var(--ink);line-height:1}
+.cost-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);display:block;margin-top:8px}
+.cost-note{font-size:12px;color:#888;display:block;margin-top:6px;line-height:1.4}
+
+/* EUROPA */
+.eu-table{width:100%;border-collapse:collapse}
+.eu-table th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 0;border-bottom:2px solid var(--ink);text-align:left}
+.eu-table td{padding:14px 0;vertical-align:top;font-size:13px;border-bottom:1px solid var(--border);line-height:1.5}
+.eu-table tr:last-child td{border-bottom:none}
+.eu-table td:first-child{font-weight:500;width:120px}
+.eu-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;white-space:nowrap}
+.eu-badge.sep{background:#e8f5ee;color:var(--verified);border:1px solid #b8dfc9}
+.eu-badge.nosep{background:#fdf3e8;color:var(--uncertain);border:1px solid #f0d4a8}
+.eu-badge.misto{background:#f0eef8;color:var(--political);border:1px solid #c9c4e8}
+
+/* DISINFO */
+.disinfo-item{border:1px solid var(--border);padding:24px;background:#fff;margin-bottom:16px;position:relative}
+.disinfo-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--warn)}
+.disinfo-claim{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.4;margin-bottom:12px}
+.disinfo-meta{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.disinfo-channel{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.08em}
+.disinfo-analysis{font-size:13px;color:#444;line-height:1.6;border-top:1px solid var(--border);padding-top:12px;margin-top:12px}
+
+/* SOURCES */
+.sources-list{display:flex;flex-direction:column;gap:0}
+.source-item{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:14px;text-decoration:none;color:var(--ink)}
+.source-item:last-child{border-bottom:none}
+.source-code{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;width:80px;flex-shrink:0}
+.source-item:hover{color:var(--accent2)}
+.source-arrow{margin-left:auto;color:var(--muted);font-size:12px}
+
+/* DISCLAIMER */
+.disclaimer{background:#fff;border:1px solid var(--border);border-left:3px solid var(--accent);padding:20px 24px;font-size:13px;color:#555;line-height:1.6;margin-top:24px}
+.disclaimer strong{color:var(--ink);font-weight:500}
+
+/* FOOTER */
+footer{border-top:2px solid #0a0c0f;padding:48px 32px 40px;background:#0a0c0f;color:var(--paper)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
+.footer-logo{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:600;letter-spacing:.2em;margin-bottom:8px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,.45);max-width:400px;line-height:1.6}
+.footer-right{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-align:right;line-height:2}
+
+/* UTILS */
+.mono{font-family:'IBM Plex Mono',monospace}
+.small{font-size:12px;color:var(--muted)}
+.mt-8{margin-top:8px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}
+
+/* BACK TO TOP */
+.back-top{position:fixed;bottom:32px;right:32px;width:44px;height:44px;background:var(--ink);color:var(--paper);border:none;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(8px);transition:all .3s;z-index:200;font-family:'IBM Plex Mono',monospace;line-height:1}
+.back-top.visible{opacity:1;transform:translateY(0)}
+.back-top:hover{background:var(--accent)}
+
+/* SHARE BAR */
+.share-bar{display:flex;align-items:center;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap}
+.share-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.share-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;border:1px solid var(--border);background:#fff;cursor:pointer;color:var(--ink);text-decoration:none;display:inline-block;transition:all .2s}
+.share-btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.share-btn.copied{background:var(--verified);color:#fff;border-color:var(--verified)}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:8px}
+.timeline::before{content:'';position:absolute;left:16px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.tl-item{display:grid;grid-template-columns:32px 1fr;gap:20px;padding:16px 0;position:relative}
+.tl-dot{width:32px;height:32px;border-radius:50%;background:#fff;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;font-size:14px}
+.tl-dot.done{background:var(--ink);border-color:var(--ink)}
+.tl-dot.key{background:var(--accent);border-color:var(--accent)}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}
+.tl-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.tl-desc{font-size:13px;color:#666;line-height:1.5}
+
+
+/* CONFIDENCE SCORE */
+.confidence{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--muted);margin-top:8px}
+.confidence-bar{height:4px;border-radius:2px;background:var(--border);width:60px;overflow:hidden;display:inline-block}
+.confidence-fill{height:100%;border-radius:2px;background:var(--ink)}
+.confidence-fill.high{background:var(--verified)}
+.confidence-fill.med{background:var(--uncertain)}
+.confidence-fill.low{background:var(--warn)}
+
+/* PRINT */
+@media print{
+  .topbar,.subnav,.countdown-bar,.risultati-bar,.back-top,.share-bar,.poll-refresh-btn{display:none!important}
+  body{background:#fff;font-size:12px}
+  .hero{grid-template-columns:1fr;padding:24px 0}
+  section{padding:24px 0;page-break-inside:avoid}
+  .two-col,.three-col{grid-template-columns:1fr}
+  .scenario{background:#f5f5f5!important;color:#000!important}
+  .scenario ul li{color:#333!important}
+  a{color:inherit;text-decoration:none}
+  footer{background:#fff!important;color:#000!important;border-top:1px solid #ccc}
+}
+
+/* NAV ORIZZONTALE */
+.subnav{background:#fff;border-bottom:1px solid var(--border);padding:0;position:sticky;top:40px;z-index:90;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.subnav::-webkit-scrollbar{display:none}
+.subnav-inner{display:flex;gap:0;max-width:1100px;margin:0 auto;padding:0 32px}
+.subnav a{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:12px 12px;display:inline-block;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}
+.subnav a:hover{color:var(--ink);border-bottom-color:var(--border)}
+.nav-short{display:none}
+.nav-full{display:inline}
+
+/* RISULTATI LIVE */
+.risultati-bar{background:var(--verified);color:#fff;padding:24px 0;display:none}
+.risultati-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.risultati-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.risultati-link{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:6px 16px;letter-spacing:.1em}
+.risultati-link:hover{background:rgba(255,255,255,.15)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  /* TOPBAR */
+  .topbar{padding:0 16px}
+  .topbar-inner{height:40px}
+  .topbar .module{display:none}
+  .topbar .sep{display:none}
+  .topbar .ts{display:none}
+  .topbar .logo{font-size:13px;letter-spacing:.15em}
+  .topbar-left > span:not(.logo):not(.live-dot){display:none}
+  .topbar-left{gap:10px}
+
+  /* SUBNAV */
+  .subnav{top:40px;padding:0}
+  .subnav-inner{padding:0 4px}
+  .subnav a{padding:10px 6px;font-size:9px;letter-spacing:.04em}
+  .nav-full{display:none}
+  .nav-short{display:inline}
+
+  /* COUNTDOWN */
+  .countdown-bar{padding:16px 0}
+  .countdown-inner{padding:0 16px;gap:8px;flex-wrap:nowrap}
+  .countdown-num{font-size:22px;min-width:28px}
+  .countdown-lbl{font-size:8px;letter-spacing:.08em}
+  .countdown-sep{font-size:16px;padding-top:4px}
+  .countdown-date{display:none}
+  .countdown-label{font-size:8px;letter-spacing:.08em;white-space:nowrap;display:block}
+
+  /* HERO */
+  .hero{grid-template-columns:1fr;gap:24px;padding:40px 16px 32px}
+  .hero-meta{text-align:left;border-top:1px solid var(--border);padding-top:20px}
+  .hero h1{font-size:36px}
+
+  /* LAYOUT */
+  .container{padding:0 16px}
+  section{padding:36px 0}
+  .two-col,.three-col{grid-template-columns:1fr;gap:20px}
+
+  /* CLASSIFICATION GRIDS */
+  .class-grid{grid-template-columns:1fr 1fr}
+
+  /* METODO - griglia 4+5 → 2 colonne */
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr !important}
+  [style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important}
+  /* Metodo intro row */
+  [style*="grid-template-columns:1fr auto"]{grid-template-columns:1fr !important}
+
+  /* SCENARIO blocks */
+  .scenario{padding:24px 20px}
+  .scenario h3{font-size:18px}
+
+  /* VOCI - due colonne → una */
+  [style*="grid-template-columns:1fr 1fr;gap:16px 48px"]{grid-template-columns:1fr !important;gap:20px !important}
+
+  /* EU TABLE */
+  .eu-table{font-size:12px}
+  .eu-table th:last-child,.eu-table td:last-child{display:none}
+
+  /* INFO TABLE */
+  .info-table td:first-child{width:100px;font-size:10px}
+
+  /* SCHEDA SVG */
+  [style*="max-width:680px"]{max-width:100% !important}
+
+  /* COST STATS */
+  .cost-num{font-size:32px}
+
+  /* TIMELINE */
+  .timeline{padding-left:0}
+
+  /* FOOTER */
+  footer [style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important;gap:24px !important}
+  footer [style*="justify-content:space-between"]{flex-direction:column;gap:8px}
+
+  /* AFFLUENZA */
+  .aff-row{grid-template-columns:110px 1fr 48px}
+  .aff-year{font-size:10px}
+
+  /* BACK TO TOP */
+  .back-top{bottom:16px;right:16px;width:40px;height:40px}
+
+  /* HIDE non-essential on mobile */
+  .countdown-label{display:none}
+}
+
+@media(max-width:480px){
+  .subnav a{padding:10px 8px;font-size:8.5px;letter-spacing:.04em}
+  .hero h1{font-size:30px}
+  .countdown-num{font-size:28px;min-width:32px}
+  .countdown-sep{font-size:20px}
+  .eu-table th:nth-child(3),.eu-table td:nth-child(3){display:none}
+  .section-title{font-size:22px}
+  .disinfo-claim{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="logo">ORBIS</span>
+      <span class="sep">·</span>
+      <span class="module">REFERENDUM GIUSTIZIA 2026</span>
+      <span class="sep">·</span>
+      <span class="live-dot"></span>
+      <span style="color:#9aaccc">ANALISI ATTIVA</span>
+    </div>
+    <span class="ts">MOD.RF-IT-01 · orbis-intelligence.it</span>
+  </div>
+</div>
+
+<!-- RISULTATI LIVE (si attiva automaticamente dopo chiusura seggi) -->
+<div class="risultati-bar" id="risultati-bar">
+  <div class="risultati-inner">
+    <span class="live-dot"></span>
+    <span class="risultati-label">Votazione conclusa · Risultati ufficiali disponibili</span>
+    <a class="risultati-link" href="https://elezioni.interno.gov.it" target="_blank">Ministero dell'Interno →</a>
+    <a class="risultati-link" href="https://www.quirinale.it" target="_blank">Quirinale →</a>
+  </div>
+</div>
+
+<!-- NAV ORIZZONTALE -->
+<nav class="subnav" id="side-nav">
+  <div class="subnav-inner">
+    <a href="#sec-metodo" data-sec="sec-metodo"><span class="nav-full">Metodo</span><span class="nav-short">Met.</span></a>
+    <a href="#sec-inquadramento" data-sec="sec-inquadramento"><span class="nav-full">Cos'è</span><span class="nav-short">Cos'è</span></a>
+    <a href="#sec-scenari" data-sec="sec-scenari"><span class="nav-full">Scenari</span><span class="nav-short">Scen.</span></a>
+    <a href="#sec-sondaggi" data-sec="sec-sondaggi"><span class="nav-full">Sondaggi</span><span class="nav-short">Sond.</span></a>
+    <a href="#sec-problemi" data-sec="sec-problemi"><span class="nav-full">Problemi</span><span class="nav-short">Prob.</span></a>
+    <a href="#sec-disinfo" data-sec="sec-disinfo"><span class="nav-full">Disinfo</span><span class="nav-short">Dis.</span></a>
+    <a href="#sec-voci" data-sec="sec-voci"><span class="nav-full">Voci</span><span class="nav-short">Voci</span></a>
+    <a href="#sec-comevotare" data-sec="sec-comevotare"><span class="nav-full">Come votare</span><span class="nav-short">Voto</span></a>
+    <a href="#sec-glossario" data-sec="sec-glossario"><span class="nav-full">Glossario</span><span class="nav-short">Gloss.</span></a>
+    <a href="#sec-fonti" data-sec="sec-fonti"><span class="nav-full">Fonti</span><span class="nav-short">Fonti</span></a>
+  </div>
+</nav>
+
+<!-- COUNTDOWN -->
+<div class="countdown-bar">
+  <div class="countdown-inner">
+    <div class="countdown-label">▶ Voto tra</div>
+    <div class="countdown-units" id="countdown-units">
+      <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-lbl">giorni</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-lbl">ore</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-min">--</span><span class="countdown-lbl">minuti</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-sec">--</span><span class="countdown-lbl">secondi</span></div>
+    </div>
+    <div class="countdown-date">
+      <strong>22–23 marzo 2026</strong>
+      Seggi: 7:00–23:00 (22/3) · 7:00–15:00 (23/3)
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-badge">Modulo operativo · Istituzionale</div>
+    <h1>Analisi del<br><em>Referendum</em><br>sulla Giustizia</h1>
+    <p class="hero-sub">Orbis è un sistema indipendente di verifica delle informazioni pubbliche. Questo modulo analizza la riforma costituzionale della magistratura: testo normativo, claim politici, scenari, costi, disinformazione.</p>
+    <div style="margin-top:28px;padding:20px 24px;border-left:3px solid var(--ink);background:#fff;">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;line-height:1.5;color:var(--ink);">Orbis non si limita a riportare informazioni.<br>Le analizza, le classifica e ne valuta l'impatto.</p>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <strong>Orbis Intelligence</strong>
+    Unità: Istituzionale<br>
+    Documento: RF-IT-01<br>
+    Posizione: Indipendente<br>
+    Aggiornamento: continuo<br><span id="last-update-ts" style="font-size:10px;opacity:.7;"></span>
+    <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+      <div style="font-size:10px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;">FONTI ANALIZZATE</div>
+      <div style="font-size:20px;font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--ink);">12+</div>
+      <div style="font-size:10px;color:var(--muted);">fonti primarie monitorate</div>
+      <div style="font-size:20px;font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--ink);margin-top:8px;">8</div>
+      <div style="font-size:10px;color:var(--muted);">dichiarazioni classificate</div>
+      <div style="font-size:20px;font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--ink);margin-top:8px;">4</div>
+      <div style="font-size:10px;color:var(--muted);">casi disinformazione analizzati</div>
+    </div>
+  </div>
+</div>
+
+<section id="sec-metodo" style="background:#1a3a6e;color:var(--paper);">
+  <div class="container">
+    <div class="section-label" style="color:rgba(255,255,255,.3);">00 · Metodo Orbis</div>
+
+    <!-- INTRO ROW -->
+    <div style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;margin-bottom:48px;">
+      <div>
+        <h2 class="section-title" style="color:var(--paper);">Come analizziamo</h2>
+        <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.75;max-width:560px;">Orbis adotta un approccio strutturato e replicabile. Il metodo è applicato sistematicamente a ogni contenuto, indipendentemente dalla fonte o dallo schieramento.</p>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.1em;text-align:right;line-height:2;">
+        VERSIONE · 1.0<br>RF-IT-01<br><span id="method-ts"></span>
+      </div>
+    </div>
+
+    <!-- 4 STEPS HORIZONTAL -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);margin-bottom:48px;">
+
+      <div style="background:rgba(255,255,255,.04);padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:16px;">01</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;">Raccolta</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;">Acquisizione da fonti istituzionali, dichiarazioni ufficiali e media qualificati. Ogni fonte classificata per tipo e affidabilità.</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,.07);padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:16px;">02</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;">Classificazione</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;">Ogni contenuto categorizzato per natura: dato normativo, dichiarazione politica, interpretazione, informazione giornalistica.</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,.04);padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:16px;">03</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;">Verifica incrociata</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;">Confronto con testi normativi ufficiali e fonti primarie. Le contraddizioni interne vengono segnalate esplicitamente.</p>
+      </div>
+
+      <div style="background:rgba(255,255,255,.07);padding:28px 24px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:16px;">04</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;">Valutazione</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;">Ogni contenuto riceve un giudizio di verificabilità secondo il sistema Orbis. Pubblico, motivato e aggiornabile.</p>
+      </div>
+
+    </div>
+
+    <!-- SISTEMA CLASSIFICAZIONE UFFICIALE -->
+    <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:24px;">Sistema di classificazione Orbis · v1.0 · 9 categorie</div>
+
+      <!-- RIGA 1: classificazioni principali -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);margin-bottom:1px;">
+        <div style="background:#1a3a6e;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#2e7d52;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7ec89a;margin-bottom:8px;">Verificato</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;">Riscontrabile direttamente nel testo normativo o su fonte istituzionale primaria.</p>
+        </div>
+        <div style="background:#1a3a6e;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#2a5fa8;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aaccc;margin-bottom:8px;">Interpretazione politica</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;">Opinione o lettura politica legittima, non verificabile oggettivamente rispetto al testo.</p>
+        </div>
+        <div style="background:#1a3a6e;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#b85c00;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#e8a060;margin-bottom:8px;">Non verificabile</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;">Proiezione su effetti futuri o affermazione non supportata da dati primari disponibili.</p>
+        </div>
+        <div style="background:#1a3a6e;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#c8303a;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#e88090;margin-bottom:8px;">Pot. distorto</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;">Contraddizione con fonti primarie o struttura narrativa che suggerisce distorsione intenzionale.</p>
+        </div>
+      </div>
+
+      <!-- RIGA 2: classificazioni estese -->
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.1);">
+        <div style="background:#152e58;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#1a5c38;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6ab88a;margin-bottom:8px;">Falso (verificabile)</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.5;">Affermazione smentita da fonti primarie verificabili. La falsità è dimostrabile con riferimento diretto.</p>
+        </div>
+        <div style="background:#152e58;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#7a5c00;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#c8a040;margin-bottom:8px;">Parz. verificabile</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.5;">Parte dell'affermazione è riscontrabile, parte richiede analisi comparativa o dati non disponibili.</p>
+        </div>
+        <div style="background:#152e58;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#b85c00;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#e8a060;margin-bottom:8px;">Incerto</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.5;">Informazione non supportata da dati sufficienti. Né confermabile né smentibile allo stato attuale.</p>
+        </div>
+        <div style="background:#152e58;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#5a4a8a;margin-bottom:12px;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#b0a0e0;margin-bottom:8px;">Oggetto di dibattito</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.5;">Tema su cui esperti qualificati esprimono posizioni documentate e divergenti. Nessun consenso accademico.</p>
+        </div>
+        <div style="background:#152e58;padding:20px 16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#2a5fa8;margin-bottom:12px;opacity:.6;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7090c0;margin-bottom:8px;">Plausibile</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.5;">Coerente con fonti disponibili e precedenti istituzionali. Non contraddetto — ma non ancora verificabile.</p>
+        </div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.2);margin-top:16px;letter-spacing:.08em;">
+        Le categorie della riga superiore si applicano a dichiarazioni pubbliche e claim. Quelle della riga inferiore a scenari, proiezioni e analisi comparative.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-inquadramento">
+  <div class="container">
+    <div class="section-label">01 · Inquadramento</div>
+    <div class="two-col">
+      <div>
+        <h2 class="section-title">Cos'è questo referendum</h2>
+        <p>Si tratta di un <strong>referendum costituzionale confermativo</strong>, previsto dall'articolo 138 della Costituzione italiana. Lo strumento serve a confermare o respingere una riforma già approvata dal Parlamento ma senza raggiungere la maggioranza dei due terzi.</p>
+        <div class="mt-24">
+          <table class="info-table">
+            <tr><td>Tipo</td><td>Referendum confermativo (art. 138 Cost.)</td></tr>
+            <tr><td>Quorum</td><td><strong>Non previsto.</strong> Vince la maggioranza dei voti validi.</td></tr>
+            <tr><td>Se vince SÌ</td><td>La riforma entra in vigore</td></tr>
+            <tr><td>Se vince NO</td><td>Resta il sistema attuale</td></tr>
+            <tr><td>Date</td><td>22–23 marzo 2026</td></tr>
+            <tr><td>Come si vota</td><td>SÌ = approvo la riforma · NO = respingo · Serve documento di identità + tessera elettorale</td></tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="card blue">
+          <div class="card-title">Documento di riferimento</div>
+          <p>La riforma è stata approvata dal Parlamento. Il testo integrale è consultabile su Gazzetta Ufficiale e Camera dei Deputati. Orbis utilizza esclusivamente il testo normativo come riferimento primario.</p>
+        </div>
+        <div class="card mt-24 green">
+          <div class="card-title">Elementi principali verificati</div>
+          <p>Separazione strutturale carriere giudici/PM · Due CSM distinti · Alta Corte disciplinare separata</p>
+          <div class="verdict verified">verificato</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-claim">
+  <div class="container">
+    <div class="section-label">02 · Verifica claim pubblici</div>
+    <h2 class="section-title">Affermazioni in circolazione</h2>
+    <p style="margin-bottom:36px;font-size:14px;color:#555;">Orbis analizza le affermazioni pubbliche di attori politici, esperti e media rispetto al testo normativo. <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);">Analisi aggiornata al: <span class="analysis-ts"></span></span></p>
+    <div class="two-col">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:20px;">▲ Favorevoli alla riforma</div>
+        <div class="claim-block" data-id="ORBIS-CLM-001">
+          <div class="claim-text">"La separazione delle carriere migliora l'imparzialità del giudice"</div>
+          <div class="claim-source">FONTE · Esponenti della maggioranza parlamentare · campagna referendaria 2026</div>
+          <div class="verdict political">interpretazione politica</div>
+          <p style="font-size:12px;color:#666;margin-top:8px;">Il testo introduce la separazione. L'effetto sull'imparzialità è una proiezione — non verificabile ex ante.</p>
+          <div class="confidence"><span class="confidence-bar"><span class="confidence-fill high" style="width:85%"></span></span>Affidabilità analisi: <strong>Alta — classificazione basata su testo normativo</strong></div>
+        </div>
+        <div class="claim-block" data-id="ORBIS-CLM-002">
+          <div class="claim-text">"La riforma allinea l'Italia agli standard europei"</div>
+          <div class="claim-source">FONTE · Comunicazioni istituzionali · nov 2025 – mar 2026</div>
+          <div class="verdict uncertain">parzialmente verificabile</div>
+          <p style="font-size:12px;color:#666;margin-top:8px;">In diversi sistemi europei esiste separazione. La comparazione diretta richiede analisi caso per caso — vedi sezione Europa.</p>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--warn);margin-bottom:20px;">▼ Contrari alla riforma</div>
+        <div class="claim-block" data-id="ORBIS-CLM-003">
+          <div class="claim-text">"La riforma politicizza la magistratura"</div>
+          <div class="claim-source">FONTE · Associazioni di magistrati, partiti di opposizione · campagna referendaria 2026</div>
+          <div class="verdict political">interpretazione politica</div>
+          <p style="font-size:12px;color:#666;margin-top:8px;">La struttura del CSM cambia. Se questo produca più o meno politicizzazione è una proiezione — non dimostrabile preventivamente.</p>
+        </div>
+        <div class="claim-block" data-id="ORBIS-CLM-004">
+          <div class="claim-text">"Si indebolisce l'indipendenza dei PM"</div>
+          <div class="claim-source">FONTE · Rappresentanti ANM · campagna referendaria 2026</div>
+          <div class="verdict uncertain">oggetto di dibattito</div>
+          <p style="font-size:12px;color:#666;margin-top:8px;">La separazione strutturale è un fatto normativo. L'effetto sull'indipendenza operativa è contestato tra esperti costituzionali.</p>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Nota metodologica Orbis:</strong> Le affermazioni che proiettano effetti futuri su sistemi complessi non sono verificabili rispetto al testo normativo. Orbis le classifica come interpretazioni politiche senza esprimere giudizi di merito.
+    </div>
+  </div>
+</section>
+
+<section id="sec-scenari" style="background:#fafaf8;">
+  <div class="container">
+    <div class="section-label">03 · Analisi scenari</div>
+    <h2 class="section-title">Proiezioni post-voto</h2>
+    <p style="margin-bottom:36px;font-size:14px;color:#555;">Gli scenari non sono previsioni. Rappresentano <strong>modelli di evoluzione plausibile</strong> basati su implicazioni logiche del testo normativo e del contesto istituzionale. Non descrivono ciò che accadrà, ma ciò che potrebbe accadere.</p>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div class="scenario" style="background:#0d3320;border-left:4px solid #2e7d52;">
+        <h3><span style="border-color:rgba(46,125,82,.6);color:#7ec89a;">SÌ</span>Riforma confermata</h3>
+        <ul>
+          <li>Avvio fase transitoria per la separazione delle carriere</li>
+          <li>Costituzione dei due CSM separati (tempi da definire per legge)</li>
+          <li>Istituzione Alta Corte disciplinare</li>
+          <li>Possibili ricadute sull'organizzazione degli uffici giudiziari</li>
+          <li>Dibattito sulle leggi attuative da approvare</li>
+        </ul>
+      </div>
+      <div class="scenario" style="background:#071a0e;border-left:4px solid #1a5c38;">
+        <h3><span style="border-color:rgba(46,125,82,.5);color:#7ec89a;">ITER</span>Se vince il SÌ — tempistiche indicative</h3>
+        <ul>
+          <li><strong>Giorni dopo il voto</strong> — promulgazione e pubblicazione in Gazzetta Ufficiale. Entrata in vigore <em>formale</em>. Questo è certo.</li>
+          <li><strong>Nulla cambia operativamente il 24 marzo</strong> — magistrati in servizio continuano nelle funzioni attuali durante la transizione. Questo è certo.</li>
+          <li><strong>1–3 anni (stima)</strong> — il Parlamento dovrebbe approvare le leggi attuative: istituzione dei due CSM separati, regole di transizione, Alta Corte disciplinare. I tempi reali dipendono dalla volontà politica e dagli equilibri parlamentari — nessuno può garantirli.</li>
+          <li><strong>2–5 anni (stima)</strong> — piena operatività strutturale. Anche questa è una proiezione basata su precedenti costituzionali analoghi, non una certezza.</li>
+        </ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;">
+          CLASSIFICAZIONE · <span style="color:#9aaccc;">PLAUSIBILE</span> — stime basate su precedenti costituzionali e iter parlamentari analoghi · i tempi effettivi dipendono dalla volontà politica e dalle leggi attuative ancora da scrivere · non sono certezze
+        </div>
+      </div>
+      <div class="scenario" style="background:#0f2a5a;border-left:4px solid #2a5fa8;">
+        <h3><span style="border-color:rgba(42,95,168,.6);color:#9aaccc;">NO</span>Status quo confermato</h3>
+        <ul>
+          <li>Sistema attuale rimane invariato — CSM unico, carriere unificate, passaggi consentiti</li>
+          <li>La riforma decade — non può essere ripresentata in forma identica prima di un anno</li>
+          <li>Il Parlamento potrebbe avviare un nuovo iter con testo diverso o parziale</li>
+          <li>Possibile riapertura del dibattito politico-istituzionale sulla magistratura</li>
+          <li>Le criticità strutturali documentate resterebbero irrisolte da questo intervento</li>
+        </ul>
+      </div>
+      <div class="scenario" style="background:#091e42;border-left:4px solid #1a3a6e;">
+        <h3><span style="border-color:rgba(154,172,204,.4);color:#9aaccc;">ITER</span>Se vince il NO — cosa potrebbe succedere</h3>
+        <ul>
+          <li><strong>Il giorno dopo</strong> — il Ministero dell'Interno comunica il risultato ufficiale. Nessun cambiamento operativo nel sistema giudiziario.</li>
+          <li><strong>Settimane successive</strong> — il governo dovrebbe decidere se leggere il risultato come pronuncia tecnica sul testo o come voto politico sull'esecutivo. Meloni ha dichiarato che non si dimetterebbe in caso di vittoria del NO.</li>
+          <li><strong>Breve termine</strong> — potrebbe riattivarsi il dibattito parlamentare. Possibili proposte di riforma parziale o alternativa (es. solo separazione funzioni, senza CSM separati). Non è detto che accada.</li>
+          <li><strong>Medio termine</strong> — le criticità documentate (caso Palamara, correnti ANM, commistione carriere) resterebbero sul tavolo politico senza una risposta normativa approvata. Il dibattito potrebbe riprendere o restare latente.</li>
+        </ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em;">
+          CLASSIFICAZIONE · <span style="color:#9aaccc;">PLAUSIBILE</span> — scenari ipotetici basati su dichiarazioni verificate e precedenti istituzionali · non previsioni
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-sondaggi">
+  <div class="container">
+    <div class="section-label">04 · Sondaggi demoscopici</div>
+    <div class="two-col">
+      <div>
+        <div class="poll-header">
+          <div>
+            <h2 class="section-title" style="margin-bottom:4px;">Rassegna sondaggi</h2>
+            <p style="font-size:13px;color:#666;">Aggregazione automatica giornaliera da istituti demoscopici italiani.</p>
+          </div>
+          <button class="poll-refresh-btn" id="poll-refresh-btn"><span>↻</span> Aggiorna</button>
+        </div>
+        <div id="poll-feed"><div class="news-loading">Ricerca sondaggi in corso…</div></div>
+        <div class="poll-last-update" id="poll-last-update"></div>
+        <p class="poll-nota">Orbis NON produce sondaggi. Aggrega esclusivamente titoli e link pubblicati dagli istituti. Orbis non valida né certifica i dati pubblicati dagli istituti. I numeri vanno verificati direttamente sulla fonte primaria.</p>
+      </div>
+      <div>
+        <h2 class="section-title">Istituti monitorati</h2>
+        <p style="font-size:13px;color:#666;margin-bottom:20px;">Fonti monitorate in automatico ogni 24 ore.</p>
+        <div class="poll-istituti-links">
+          <a class="poll-istituto-tag" href="https://www.demos.it" target="_blank">Demos &amp; Pi</a>
+          <a class="poll-istituto-tag" href="https://www.swg.it" target="_blank">SWG</a>
+          <a class="poll-istituto-tag" href="https://tecne.eu" target="_blank">Tecnè</a>
+          <a class="poll-istituto-tag" href="https://www.emg.it" target="_blank">EMG Different</a>
+          <a class="poll-istituto-tag" href="https://euromediaresearch.it" target="_blank">Euromedia</a>
+          <a class="poll-istituto-tag" href="https://www.ipsos.com/it-it" target="_blank">Ipsos Italia</a>
+          <a class="poll-istituto-tag" href="https://www.winpoll.it" target="_blank">Winpoll</a>
+        </div>
+        <div class="card" style="border-left-color:var(--uncertain);">
+          <div class="card-title">Compliance · Silenzio elettorale</div>
+          <p>La legge italiana (art. 8 L. 28/2000) vieta la pubblicazione di sondaggi nei 15 giorni precedenti il voto. <strong>Questa sezione si sospende automaticamente dal 7 marzo 2026.</strong></p>
+          <div class="verdict verified" style="margin-top:12px;">compliance automatica</div>
+        </div>
+        <div class="card mt-16 blue">
+          <div class="card-title">Registro ufficiale sondaggi</div>
+          <p>Tutti i sondaggi pubblicati in Italia devono essere depositati presso il Ministero delle Imprese e del Made in Italy.</p>
+          <a href="https://www.sondaggipoliticoelettorali.it" target="_blank" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent2);display:block;margin-top:10px;">Registro ufficiale →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-news" style="background:#fafaf8;">
+  <div class="container">
+    <div class="section-label">05 · Affluenza storica</div>
+    <h2 class="section-title">Referendum italiani a confronto</h2>
+    <p style="font-size:13px;color:#666;margin-bottom:32px;max-width:560px;">Il referendum 2026 <strong>non prevede quorum</strong> — vince la maggioranza dei voti validi. Confronto con i principali referendum italiani dal 1995.</p>
+    <div style="max-width:640px;">
+      <div class="aff-chart" id="aff-chart"></div>
+      <div class="disclaimer" style="margin-top:16px;">
+        <strong>Fonte:</strong> Ministero dell'Interno, dati storici ufficiali.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-costi">
+  <div class="container">
+    <div class="section-label">06 · Costo del referendum</div>
+    <h2 class="section-title">Quanto costa questa consultazione</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:36px;max-width:600px;">Dati basati su stime del Ministero dell'Interno e confronto con referendum precedenti. I costi sono a carico della fiscalità generale.</p>
+    <div class="three-col" style="margin-bottom:32px;">
+      <div class="cost-stat">
+        <span class="cost-num">~300M</span>
+        <span class="cost-label">Costo stimato totale</span>
+        <span class="cost-note">€ — stima basata su precedenti consultazioni analoghe</span>
+      </div>
+      <div class="cost-stat">
+        <span class="cost-num">~61.000</span>
+        <span class="cost-label">Seggi attivi</span>
+        <span class="cost-note">su tutto il territorio nazionale + estero</span>
+      </div>
+      <div class="cost-stat">
+        <span class="cost-num">~400.000</span>
+        <span class="cost-label">Scrutatori e presidenti</span>
+        <span class="cost-note">personale impiegato per due giornate di voto</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <table class="info-table">
+          <tr><td>Organizzazione logistica</td><td>Stampa schede, allestimento seggi, trasporto urne</td></tr>
+          <tr><td>Personale</td><td>Presidenti, scrutatori, forze dell'ordine</td></tr>
+          <tr><td>Amministrazione</td><td>Comuni, prefetture, Ministero dell'Interno</td></tr>
+          <tr><td>Comunicazione istituzionale</td><td>Informazione ai cittadini (obbligatoria per legge)</td></tr>
+          <tr><td>Confronto 2022</td><td>5 referendum: costo stimato €200–280M, quorum non raggiunto</td></tr>
+        </table>
+      </div>
+      <div class="disclaimer" style="align-self:start;">
+        <strong>Classificazione Orbis:</strong> <span class="verdict uncertain" style="display:inline-flex;margin:0 4px 0;">incerto</span><br><br>
+        Le stime sui costi dei referendum italiani non sono mai ufficializzate con precisione dal Governo. I valori indicati derivano da elaborazioni di istituti di ricerca e giornalismo d'inchiesta. Orbis indica l'ordine di grandezza, non il dato preciso.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-europa" style="background:#fafaf8;">
+  <div class="container">
+    <div class="section-label">07 · Confronto europeo</div>
+    <h2 class="section-title">Separazione delle carriere in Europa</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:32px;max-width:640px;">Il claim "allinea l'Italia agli standard europei" richiede verifica caso per caso. Non esiste un modello europeo unico. Dati verificati su fonti istituzionali e comparative law.</p>
+    <table class="eu-table">
+      <thead>
+        <tr>
+          <th>Paese</th>
+          <th>Sistema</th>
+          <th>Modello</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Francia</td>
+          <td><span class="eu-badge sep">separato</span></td>
+          <td>Carriere separate dalla formazione. Due corpi distinti: magistrature du siège e parquet.</td>
+          <td>Punto di riferimento citato dai sostenitori della riforma italiana.</td>
+        </tr>
+        <tr>
+          <td>Germania</td>
+          <td><span class="eu-badge sep">separato</span></td>
+          <td>Giudici e pubblici ministeri appartengono a corpi separati. Il PM non è indipendente dall'esecutivo.</td>
+          <td>Il PM tedesco è gerarchicamente subordinato al Ministro della Giustizia.</td>
+        </tr>
+        <tr>
+          <td>Spagna</td>
+          <td><span class="eu-badge misto">misto</span></td>
+          <td>Carriere formalmente separate ma con un unico organo di autogoverno (CGPJ) per tutta la magistratura.</td>
+          <td>Modello più vicino all'attuale sistema italiano che a quello riformato.</td>
+        </tr>
+        <tr>
+          <td>UK</td>
+          <td><span class="eu-badge sep">separato</span></td>
+          <td>Netta separazione: giudici (judiciary) e Crown Prosecution Service sono istituzioni completamente distinte.</td>
+          <td>Sistema di common law, difficilmente comparabile con ordinamenti di civil law.</td>
+        </tr>
+        <tr>
+          <td>Italia attuale</td>
+          <td><span class="eu-badge nosep">non separato</span></td>
+          <td>Unico CSM per giudici e PM. Passaggio di carriera consentito (con limiti). Sistema anomalo nel panorama europeo occidentale.</td>
+          <td>La riforma interviene su questo elemento di unicità italiana.</td>
+        </tr>
+        <tr>
+          <td>Italia riformata</td>
+          <td><span class="eu-badge sep">separato</span></td>
+          <td>Due CSM distinti. Carriere separate. Alta Corte disciplinare autonoma.</td>
+          <td>Più vicina al modello francese, ma con caratteristiche proprie.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="disclaimer">
+      <strong>Classificazione Orbis:</strong> Il confronto è <span class="verdict uncertain" style="display:inline-flex;margin:0 4px;">parzialmente verificabile</span> — la separazione formale esiste in molti Paesi europei, ma i modelli di governance, indipendenza e controllo politico variano significativamente. La separazione delle carriere non equivale automaticamente a maggiore o minore indipendenza della magistratura.
+    </div>
+  </div>
+</section>
+
+<section id="sec-disinfo">
+  <div class="container">
+    <div class="section-label">08 · Analisi disinformazione</div>
+    <h2 class="section-title">Narrative distorte in circolazione</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:32px;max-width:640px;">Orbis monitora le narrative che si discostano dal testo normativo. <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);">Analisi aggiornata al: <span class="analysis-ts"></span></span></p>
+
+    <div class="disinfo-item">
+      <div class="disinfo-claim">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;">ID · ORBIS-DIS-001</div>"Se vince il NO, la magistratura torna sotto il controllo della politica"</div>
+      <div class="disinfo-meta">
+        <span class="disinfo-channel">Canale · Social media, messaggistica</span>
+        <div class="verdict warn">pot. distorto</div>
+      </div>
+      <div class="disinfo-analysis">
+        <strong>Analisi:</strong> Il sistema attuale — quello che resterebbe con la vittoria del NO — è il sistema vigente dal 1948. La narrativa presuppone che l'attuale sistema già incorpori un "controllo politico" che deve essere "ripristinato". Non riscontrato nel testo normativo né in fonti primarie. Il testo normativo non introduce né ripristina alcun "controllo politico" sulla magistratura.
+      </div>
+    </div>
+
+    <div class="disinfo-item">
+      <div class="disinfo-claim">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;">ID · ORBIS-DIS-002</div>"Il referendum è solo un attacco a Berlusconi / alla sinistra / ai giudici comunisti"</div>
+      <div class="disinfo-meta">
+        <span class="disinfo-channel">Canale · Media partitici, social</span>
+        <div class="verdict political">interpretazione politica</div>
+      </div>
+      <div class="disinfo-analysis">
+        <strong>Analisi:</strong> La narrativa sostituisce il contenuto normativo con una chiave di lettura identitaria. Il referendum verte su articoli specifici della Costituzione — non su persone fisiche o partiti. La classificazione avviene su argomenti normativi, non su intenzioni degli attori.
+      </div>
+    </div>
+
+    <div class="disinfo-item">
+      <div class="disinfo-claim">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;">ID · ORBIS-DIS-003</div>"Non votare equivale a votare NO"</div>
+      <div class="disinfo-meta">
+        <span class="disinfo-channel">Canale · Vari, molto diffuso</span>
+        <div class="verdict warn">pot. distorto</div>
+      </div>
+      <div class="disinfo-analysis">
+        <strong>Analisi:</strong> Formalmente falso. Il referendum confermativo ex art. 138 non prevede quorum: il non-voto non conta come NO. Vince la maggioranza dei voti <em>validi espressi</em>. Il claim è mutuato dai referendum abrogativi ex art. 75 Cost. (che prevedono quorum del 50%+1), applicato erroneamente al referendum confermativo ex art. 138 Cost. che non prevede quorum. La distinzione è verificabile direttamente sul testo costituzionale.
+      </div>
+    </div>
+
+    <div class="disinfo-item">
+      <div class="disinfo-claim">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;">ID · ORBIS-DIS-004</div>"La riforma è già stata bocciata dalla Corte Costituzionale"</div>
+      <div class="disinfo-meta">
+        <span class="disinfo-channel">Canale · Messaggistica, blog</span>
+        <div class="verdict warn">Falso (verificabile)</div>
+      </div>
+      <div class="disinfo-analysis">
+        <strong>Analisi:</strong> Non riscontrato. La Corte Costituzionale ha verificato l'ammissibilità del referendum — procedura ordinaria — senza bocciare la riforma nel merito. Nessuna sentenza di incostituzionalità risulta agli atti alla data di questa analisi e sulla base delle fonti disponibili — dato verificabile sul sito della Corte Costituzionale.
+      </div>
+    </div>
+
+    <div style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;border-top:1px solid var(--border);padding-top:16px;">
+      Classificazioni applicate secondo il <strong style="color:var(--ink);">Sistema Orbis v1.0</strong> — vedi sezione 00 · Metodo
+    </div>
+  </div>
+</section>
+
+<section id="sec-voci">
+  <div class="container">
+    <div class="section-label">09 · Voci degli attori</div>
+    <h2 class="section-title">Dichiarazioni pubbliche verificate</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:16px;max-width:640px;">Dichiarazioni rilasciate pubblicamente da attori politici, istituzionali e della società civile. <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);">Analisi aggiornata al: <span class="analysis-ts"></span></span></p>
+    <div class="disclaimer" style="margin-bottom:32px;border-left-color:var(--uncertain);">
+      <strong>Nota sulle fonti:</strong> Le dichiarazioni sono riportate come citate dalle fonti giornalistiche indicate. Orbis non ha accesso diretto ai testi originali integrali — alcune potrebbero essere parzialmente parafrasate dai media. Per verificare la citazione esatta si raccomanda di consultare la fonte primaria indicata (comunicati ufficiali, video originali, trascrizioni parlamentari). Orbis classifica il contenuto, non garantisce la trascrizione letterale.
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 48px;">
+
+      <!-- FRONTE SÌ -->
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--accent2);">▲ Fronte SÌ</div>
+
+        <div class="disinfo-item" style="border-left-color:var(--accent2);">
+          <div class="disinfo-claim">"Chi andrebbe a vedere una partita nella quale l'arbitro indossasse la stessa maglia di una delle due squadre e a fine partita se ne andasse a cena con i giocatori di quella squadra?"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Antonio Tajani · Vicepremier · Segretario Forza Italia · 16 mar 2026</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Metafora retorica che usa un'immagine familiare per descrivere un problema strutturale reale — giudice e PM appartengono oggi allo stesso corpo e agli stessi organi di governo (CSM). Questo è verificabile sul testo normativo. Il salto logico dalla condizione strutturale agli effetti concreti sull'imparzialità non è verificabile a priori. <span class="verdict uncertain" style="display:inline-flex;margin:4px 0;">parzialmente verificabile</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: ANSA / Fanpage.it · 16 mar 2026 · videomessaggio social</div>
+        </div>
+
+        <div class="disinfo-item" style="border-left-color:var(--accent2);">
+          <div class="disinfo-claim">"Una vittoria del No sarebbe un peccato, perché questa è una nazione che ha bisogno di essere modernizzata"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Giorgia Meloni · Presidente del Consiglio · FdI</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Affermazione di valore politico. "Modernizzazione" non è definita nel testo normativo. Inquadra la riforma come progresso — non riscontrabile sul piano normativo. <span class="verdict political" style="display:inline-flex;margin:4px 0;">interpretazione politica</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Avvenire / Sky TG24 · Feb 2026</div>
+        </div>
+
+        <div class="disinfo-item" style="border-left-color:var(--accent2);">
+          <div class="disinfo-claim">"In tutta Europa e nel mondo la separazione delle carriere è un dato acquisito, solo in Italia no"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Carlo Nordio · Ministro della Giustizia</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Parzialmente verificabile. La separazione esiste in molti Paesi (Francia, Germania, UK, Portogallo), ma non è universale. Spagna e altri sistemi hanno modelli misti. Il claim "solo in Italia no" è una semplificazione. <span class="verdict uncertain" style="display:inline-flex;margin:4px 0;">parzialmente verificabile</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: La Via Libera · 14 nov 2025</div>
+        </div>
+
+        <div class="disinfo-item" style="border-left-color:var(--accent2);">
+          <div class="disinfo-claim">"Il magistrato deve stare al di sopra delle parti. Quando diventa militante della politica perde la sua indipendenza"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Antonio Tajani · Vicepremier · Forza Italia</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Il principio di terzietà è nel testo della riforma. Il nesso causale tra carriere unificate e "militanza politica" è un'interpretazione — non verificabile a priori. <span class="verdict political" style="display:inline-flex;margin:4px 0;">interpretazione politica</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: La Via Libera · 18 set 2024</div>
+        </div>
+
+        <div class="disinfo-item" style="border-left-color:var(--warn);">
+          <div class="disinfo-claim">"Votate sì e ci leviamo di mezzo la magistratura"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Giusi Bartolozzi · Capo di Gabinetto del Min. Nordio</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Dichiarazione che contraddice le premesse ufficiali della riforma (che afferma di non voler indebolire la magistratura). Nordio si è dissociato. Bartolozzi non si è scusata. <span class="verdict warn" style="display:inline-flex;margin:4px 0;">contraddizione interna al fronte SÌ</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Fanpage.it · Mar 2026</div>
+        </div>
+      </div>
+
+      <!-- FRONTE NO -->
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--warn);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--warn);">▼ Fronte NO</div>
+
+        <div class="disinfo-item">
+          <div class="disinfo-claim">"Questa non è una riforma della giustizia. Non tocca nessuno dei nodi cruciali: né la lunghezza dei processi, né il sovraffollamento carcerario"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Elly Schlein · Segretaria PD</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Verificabile. Lo stesso Nordio ha confermato: "Questa riforma non influisce sull'efficienza della giustizia e mai nessuno lo ha preteso." Il claim è internamente coerente con le ammissioni del fronte SÌ. <span class="verdict verified" style="display:inline-flex;margin:4px 0;">verificato</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Partito Democratico · nov 2025</div>
+        </div>
+
+        <div class="disinfo-item">
+          <div class="disinfo-claim">"Se vince il No, non sarebbe una vittoria della Schlein ma una vittoria delle procure"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Carlo Nordio · Ministro della Giustizia (risposta al NO)</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Dichiarazione del fronte SÌ rivolta al fronte NO. Tecnica retorica: identifica il voto NO con un soggetto istituzionale (le procure) anziché con un'opzione politica. Non verificabile nel testo normativo. <span class="verdict political" style="display:inline-flex;margin:4px 0;">interpretazione politica</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Il Fatto Quotidiano · 10 feb 2026</div>
+        </div>
+
+        <div class="disinfo-item">
+          <div class="disinfo-claim">"La riforma è un'inaccettabile aggressione alla Carta costituzionale"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Rosy Bindi · Ex Ministro, fronte NO</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Giudizio di valore politico-costituzionale. La riforma è stata approvata con la procedura prevista dall'art. 138 Cost. — il meccanismo è conforme. Il merito dell'impatto costituzionale è oggetto di dibattito tra esperti. <span class="verdict political" style="display:inline-flex;margin:4px 0;">interpretazione politica</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Fanpage.it · Mar 2026</div>
+        </div>
+
+        <div class="disinfo-item">
+          <div class="disinfo-claim">"Nonostante una pessima campagna referendaria, voterò convintamente sì"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Benedetto Della Vedova · Deputato +Europa (voto SÌ da fronte opposto)</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Voce significativa: esponente di area centro-liberale non allineato al governo esprime SÌ critico. Segnala che la divisione non è solo maggioranza/opposizione. Azione e +Europa votano SÌ; Italia Viva lascia libertà di coscienza. <span class="verdict verified" style="display:inline-flex;margin:4px 0;">verificato · frattura trasversale</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Fanpage.it / Radio Radicale · Mar 2026</div>
+        </div>
+
+        <div class="disinfo-item">
+          <div class="disinfo-claim">"Indebolire l'indipendenza dei giudici è come fare un forellino in una diga: prima o poi tutto frana"</div>
+          <div class="disinfo-meta">
+            <span class="disinfo-channel">Emiliano Manfredonia · Presidente ACLI · fronte NO</span>
+          </div>
+          <div class="disinfo-analysis">
+            <strong>Classificazione Orbis:</strong> Affermazione che proietta un effetto futuro — l'indebolimento dell'indipendenza della magistratura — non riscontrabile nel testo normativo. La riforma modifica la struttura organizzativa; l'impatto sull'indipendenza operativa è oggetto di interpretazione tra esperti. <span class="verdict political" style="display:inline-flex;margin:4px 0;">interpretazione politica</span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:8px;">Fonte: Fanpage.it · chiusura campagna NO · Roma · Mar 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer" style="margin-top:32px;">
+      <strong>Nota Orbis:</strong> Tutte le dichiarazioni riportate sono pubblicamente verificabili sulle fonti citate. La classificazione non esprime una valutazione politica — valuta la verificabilità rispetto al testo normativo e alla coerenza interna delle affermazioni. I sondaggi citati nelle fonti danno il NO in vantaggio a pochi giorni dal voto (Mar 2026).
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMATICHE -->
+<section id="sec-problemi" style="background:#fafaf8;">
+  <div class="container">
+    <div class="section-label">10 · Contesto — sistema giudiziario italiano</div>
+    <h2 class="section-title">Le problematiche strutturali della giustizia italiana</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:8px;max-width:640px;">Il referendum interviene su un sistema con criticità documentate da decenni. Questa sezione fotografa lo stato attuale — indipendentemente dalla riforma in votazione. <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;">Fonte: CEPEJ 2024, Ministero della Giustizia, Osservatorio CPI Università Cattolica · <span class="analysis-ts"></span></span></p>
+
+    <div class="three-col" style="margin:32px 0;">
+      <div class="cost-stat">
+        <span class="cost-num">5 anni</span>
+        <span class="cost-label">Durata media processo civile</span>
+        <span class="cost-note">3 gradi di giudizio · dato 2025 · in calo dal picco di 8 anni (2010)</span>
+      </div>
+      <div class="cost-stat">
+        <span class="cost-num">2a 4m</span>
+        <span class="cost-label">Durata media processo penale</span>
+        <span class="cost-note">dato 2025 · obiettivo PNRR raggiunto (-38% vs 2019)</span>
+      </div>
+      <div class="cost-stat">
+        <span class="cost-num">16</span>
+        <span class="cost-label">Magistrati ogni 100.000 abitanti</span>
+        <span class="cost-note">vs media UE di 33 · carenza stimata ~1.250 unità (2023)</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:20px;">Durata dei processi</h3>
+
+        <div class="disinfo-item" style="border-left-color:var(--uncertain);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;">CIVILE · 3 GRADI DI GIUDIZIO</div>
+          <p style="font-size:14px;line-height:1.6;">Nel 2025 un processo civile che arriva in Cassazione dura in media <strong>5 anni</strong>. Nel 2010 erano 8 anni e 2 mesi. Il miglioramento è reale ma insufficiente: in Francia e Spagna la durata è ~3 anni e 8 mesi, in Germania ~1 anno e 5 mesi.</p>
+          <div class="verdict uncertain" style="margin-top:10px;">obiettivo PNRR -40% vs 2019 · raggiunto solo -28%</div>
+        </div>
+
+        <div class="disinfo-item" style="border-left-color:var(--verified);margin-top:12px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;">PENALE · 3 GRADI DI GIUDIZIO</div>
+          <p style="font-size:14px;line-height:1.6;">Il penale ha performato meglio: 2 anni e 4 mesi nel 2025, -38% rispetto al 2019. <strong>Obiettivo PNRR raggiunto.</strong> Restano criticità nei tribunali con alta presenza di criminalità organizzata, dove i maxiprocessi dilatano i tempi.</p>
+          <div class="verdict verified" style="margin-top:10px;">obiettivo PNRR -25% · raggiunto</div>
+        </div>
+
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin:24px 0 16px;">Carenza di organico</h3>
+        <div class="disinfo-item" style="border-left-color:var(--warn);">
+          <p style="font-size:14px;line-height:1.6;">L'Italia ha <strong>16 magistrati ogni 100.000 abitanti</strong> contro una media UE di 33. La carenza stimata è di ~1.250 unità rispetto agli organici previsti. Il paradosso: la spesa per stipendi dei tribunali in rapporto al PIL è in linea con la media UE — ma il minor numero di addetti è compensato da stipendi più elevati.</p>
+          <p style="font-size:13px;color:#666;margin-top:8px;">Nota: l'Italia ha invece un numero elevatissimo di avvocati — 236.000, quasi un quinto del totale europeo — che genera un alto volume di contenziosi.</p>
+          <div class="verdict warn" style="margin-top:10px;">criticità strutturale · non affrontata dalla riforma in votazione</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:20px;">Altre criticità documentate</h3>
+
+        <div class="card" style="margin-bottom:12px;">
+          <div class="card-title">Impatto sul PIL</div>
+          <p>Le inefficienze della giustizia civile sottraggono stimati ~2,5 punti percentuali al PIL italiano. Scoraggiano gli investimenti esteri, ostacolano il recupero crediti commerciali, aumentano il costo del credito per le imprese. La Banca Mondiale nel rapporto Doing Business collocava l'Italia al 122° posto su 190 per "Enforcing contracts".</p>
+          <div class="verdict uncertain">stima · fonte: Banca Mondiale / letteratura economica</div>
+        </div>
+
+        <div class="card" style="margin-bottom:12px;">
+          <div class="card-title">Arretrato giudiziario</div>
+          <p>Il numero di cause pendenti si è ridotto rispetto al picco del 2009 (oltre 5 milioni). Al 2023 la riduzione per i pendenti presso i Tribunali è stata del 50% rispetto al 2017 — uno dei pochi obiettivi PNRR in linea. Restano circa 3 milioni di cause pendenti totali.</p>
+          <div class="verdict verified">fonte: Ministero della Giustizia · monitoraggio PNRR 2024</div>
+        </div>
+
+        <div class="card" style="margin-bottom:12px;">
+          <div class="card-title">Digitalizzazione</div>
+          <p>Il PNRR ha finanziato la digitalizzazione del sistema. Al gennaio 2025 risultano digitalizzati 5,8 milioni di fascicoli su 7,75 milioni previsti. Il processo civile telematico è operativo. Il CEPEJ 2024 assegna all'Italia un ICT Deployment Index di 6,5 — tra i più alti in Europa.</p>
+          <div class="verdict verified">fonte: CEPEJ 2024 / Ministero della Giustizia</div>
+        </div>
+
+        <div class="card accent">
+          <div class="card-title">Cosa NON risolve la riforma in votazione</div>
+          <p>La separazione delle carriere non interviene su: durata dei processi, carenza di magistrati, arretrato giudiziario, digitalizzazione, sovraffollamento carcerario. Lo ha confermato lo stesso ministro Nordio: <em>"Questa riforma non influisce sull'efficienza della giustizia e mai nessuno lo ha preteso."</em></p>
+          <div class="verdict verified">verificato · dichiarazione Nordio 18/3/2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Nota Orbis:</strong> Questa sezione descrive problematiche strutturali documentate da fonti terze indipendenti (CEPEJ, Università Cattolica, Ministero della Giustizia). Non implica che la riforma in votazione le risolva o non le risolva — questo è oggetto di interpretazione politica classificata nelle sezioni precedenti.
+    </div>
+  </div>
+</section>
+
+<!-- COME VOTARE -->
+<section id="sec-comevotare">
+  <div class="container">
+    <div class="section-label">11 · Guida pratica — giorno del voto</div>
+    <h2 class="section-title">Come si vota — istruzioni operative</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:36px;max-width:640px;">Informazioni pratiche per il 22–23 marzo 2026. Fonte: Ministero dell'Interno. Orbis non garantisce aggiornamenti in tempo reale — verifica sempre su <a href="https://www.interno.gov.it" target="_blank" style="color:var(--accent2);">interno.gov.it</a>.</p>
+
+    <!-- FAC SIMILE SCHEDA - CENTRATA E IN EVIDENZA -->
+    <div style="text-align:center;margin-bottom:48px;padding:40px;background:#fff;border:1px solid var(--border);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Fac-simile ufficiale · Ministero dell'Interno · 24 feb 2026</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:#888;margin-bottom:32px;">La scheda che riceverai al seggio è di <strong style="color:#5a8a3a;">colore verde</strong></div>
+
+      <!-- SCHEDA SVG GRANDE E CENTRATA -->
+      <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:inline-block;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+        <!-- sfondo -->
+        <rect width="600" height="340" fill="#e8f5e2" rx="3"/>
+        <rect x="1.5" y="1.5" width="597" height="337" fill="none" stroke="#4a7a2e" stroke-width="2"/>
+        <!-- header verde -->
+        <rect x="0" y="0" width="600" height="56" fill="#4a7a2e" rx="3"/>
+        <rect x="0" y="48" width="600" height="8" fill="#4a7a2e"/>
+        <text x="300" y="22" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="white" font-weight="bold" letter-spacing="2">REFERENDUM COSTITUZIONALE</text>
+        <text x="300" y="38" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="rgba(255,255,255,0.85)" letter-spacing="1">22 – 23 MARZO 2026</text>
+        <!-- quesito -->
+        <text x="300" y="84" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a0a" font-style="italic">Approvate il testo della legge di revisione degli artt. 87, 102, 104, 105, 106, 107 e 110 della Costituzione</text>
+        <text x="300" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a0a" font-style="italic">approvata dal Parlamento e pubblicata nella Gazzetta Ufficiale n. 253 del 30 ottobre 2025?</text>
+        <!-- linea -->
+        <line x1="50" y1="114" x2="550" y2="114" stroke="#4a7a2e" stroke-width="0.75" stroke-dasharray="4,4"/>
+        <!-- riquadro SÌ -->
+        <rect x="70" y="130" width="190" height="130" fill="white" stroke="#4a7a2e" stroke-width="2" rx="2"/>
+        <text x="165" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="52" fill="#1a3a0a" font-weight="bold">SÌ</text>
+        <text x="165" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4a7a2e" letter-spacing="1">APPROVO LA RIFORMA</text>
+        <text x="165" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#aaa">Tracciare una X o un ✓</text>
+        <!-- riquadro NO -->
+        <rect x="340" y="130" width="190" height="130" fill="white" stroke="#4a7a2e" stroke-width="2" rx="2"/>
+        <text x="435" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="52" fill="#1a3a0a" font-weight="bold">NO</text>
+        <text x="435" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4a7a2e" letter-spacing="1">RESPINGO LA RIFORMA</text>
+        <text x="435" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#aaa">Tracciare una X o un ✓</text>
+        <!-- watermark -->
+        <text x="300" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" fill="rgba(74,122,46,0.06)" font-weight="bold" transform="rotate(-20,300,200)">FAC-SIMILE</text>
+        <!-- footer -->
+        <line x1="70" y1="300" x2="240" y2="300" stroke="#ccc" stroke-width="0.75"/>
+        <line x1="360" y1="300" x2="530" y2="300" stroke="#ccc" stroke-width="0.75"/>
+        <text x="155" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#bbb">Firma Scrutatore</text>
+        <text x="445" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#bbb">Firma Scrutatore</text>
+        <text x="300" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#ccc">IPZS S.p.A. · Roma · Formato finito: cm 41×22</text>
+      </svg>
+
+      <!-- QUESITO UFFICIALE -->
+      <div style="max-width:600px;margin:32px auto 0;padding:24px;border:1px solid #4a7a2e;background:#f4faf0;text-align:left;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#4a7a2e;margin-bottom:12px;">Quesito ufficiale · DPR 7 febbraio 2026 · testo definitivo</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.6;color:var(--ink);">«Approvate il testo della legge di revisione degli artt. 87, decimo comma, 102, primo comma, 104, 105, 106, terzo comma, 107, primo comma, e 110 della Costituzione approvata dal Parlamento e pubblicata nella Gazzetta Ufficiale n. 253 del 30 ottobre 2025?»</p>
+      </div>
+
+      <!-- NOTE E LINK -->
+      <div style="margin-top:20px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:12px;color:var(--muted);">⚠ Il quesito è stato aggiornato il 7/2/2026 — stessa riforma, formulazione tecnica diversa</span>
+        <a href="https://www.interno.gov.it/sites/default/files/2026-02/fac-simile_scheda_referendum.pdf" target="_blank" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--accent2);border:1px solid var(--accent2);padding:8px 16px;text-decoration:none;white-space:nowrap;">↓ PDF ufficiale Ministero</a>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+
+        <div class="card green" style="margin-bottom:16px;">
+          <div class="card-title">✓ Cosa portare al seggio</div>
+          <p><strong>Tessera elettorale</strong> + <strong>documento di identità valido</strong>.</p>
+          <p class="mt-8">Documenti accettati: carta d'identità, passaporto, patente, libretto della pensione con foto, tessera di riconoscimento rilasciata da PA o ordini professionali con foto.</p>
+        </div>
+
+        <div class="card accent" style="margin-bottom:16px;">
+          <div class="card-title">⚠ Tessera elettorale smarrita o esaurita</div>
+          <p>Vai all'<strong>Ufficio Elettorale del tuo Comune</strong> (aperto anche nei giorni di voto, inclusa domenica). Rilasciano un duplicato o un'attestazione sostitutiva gratuita. Porta un documento di identità.</p>
+          <p class="mt-8" style="font-size:12px;color:#888;">Negli anni recenti molti Comuni hanno attivato sportelli H24 il giorno del voto — verifica sul sito del tuo Comune.</p>
+        </div>
+
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-title">📋 Come si compila la scheda</div>
+          <p>Trovi un'unica scheda con il quesito referendario. Devi tracciare un segno (<strong>X o ✓</strong>) nel riquadro <strong>SÌ</strong> o nel riquadro <strong>NO</strong>.</p>
+          <p class="mt-8"><strong>Errori che annullano la scheda:</strong> segnare entrambi i riquadri · scrivere nomi o frasi · strappare la scheda · lasciare la scheda bianca (vale come astensione, non annulla).</p>
+          <p class="mt-8"><strong>Scheda bianca</strong> = voto valido espresso, ma non conta né per SÌ né per NO.</p>
+        </div>
+
+      </div>
+      <div>
+
+        <div class="card blue" style="margin-bottom:16px;">
+          <div class="card-title">🗓 Orari seggi</div>
+          <table class="info-table" style="margin-top:8px;">
+            <tr><td>Domenica 22/3</td><td><strong>7:00 – 23:00</strong></td></tr>
+            <tr><td>Lunedì 23/3</td><td><strong>7:00 – 15:00</strong></td></tr>
+            <tr><td>Scrutinio</td><td>Inizia alle 15:00 del 23/3</td></tr>
+          </table>
+        </div>
+
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-title">🔍 Dove si trova il tuo seggio</div>
+          <p>Il seggio è indicato sulla tessera elettorale. In alternativa:</p>
+          <p class="mt-8">→ Sito del tuo Comune → sezione Elezioni<br>→ <a href="https://www.interno.gov.it" target="_blank" style="color:var(--accent2);">interno.gov.it</a> → sezione referendum<br>→ Ufficio Anagrafe del Comune (anche per telefono)</p>
+        </div>
+
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-title">✈ Fuorisede e voto all'estero</div>
+          <p><strong>Fuorisede in Italia:</strong> il referendum confermativo <strong>non prevede il voto fuorisede</strong> con le modalità speciali introdotte per le elezioni politiche. Devi recarti al tuo Comune di residenza. Verifica eventuali aggiornamenti su <a href="https://www.interno.gov.it" target="_blank" style="color:var(--accent2);">interno.gov.it</a>.</p>
+          <p class="mt-8"><strong>Residenti all'estero:</strong> voto per corrispondenza tramite la propria circoscrizione consolare. Le schede devono essere arrivate per tempo — verifica con il tuo Consolato.</p>
+          <div class="verdict uncertain" style="margin-top:12px;">verifica aggiornamenti ufficiali</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">♿ Voto assistito</div>
+          <p>Chi ha difficoltà fisiche può farsi assistere da un accompagnatore di fiducia (che non sia candidato o componente di seggio). Va comunicato al presidente di seggio all'ingresso.</p>
+          <p class="mt-8">I seggi devono essere accessibili ai disabili. In caso di problemi, contattare il Comune o il prefetto territorialmente competente.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="disclaimer" style="margin-top:24px;">
+      <strong>Fonte:</strong> Ministero dell'Interno, Istruzioni per le operazioni degli uffici elettorali di sezione. Orbis riporta le regole generali — per casi specifici o aggiornamenti verificare sempre direttamente su <a href="https://www.interno.gov.it" target="_blank" style="color:var(--accent2);">interno.gov.it</a> o presso il proprio Comune.
+    </div>
+  </div>
+</section>
+
+<!-- 10 GLOSSARIO -->
+<section id="sec-glossario" style="background:#fafaf8;">
+  <div class="container">
+    <div class="section-label">12 · Glossario istituzionale</div>
+    <h2 class="section-title">Chi è chi — le istituzioni chiave</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:36px;max-width:640px;">Le entità citate in questo documento. Definizioni basate su testi normativi e fonti istituzionali ufficiali.</p>
+    <div class="three-col">
+      <div class="card green">
+        <div class="card-title">CSM — Consiglio Superiore della Magistratura</div>
+        <p>Organo di autogoverno della magistratura, previsto dall'art. 104 Cost. Gestisce assunzioni, promozioni, trasferimenti e disciplina dei magistrati. Attualmente unico per giudici e PM. <strong>Con la riforma: due organi separati.</strong></p>
+        <div class="verdict verified">art. 104 Cost.</div>
+      </div>
+      <div class="card blue">
+        <div class="card-title">Corte Costituzionale</div>
+        <p>Organo di garanzia costituzionale (artt. 134–137 Cost.). Giudica la legittimità delle leggi. <strong>Non fa parte del CSM.</strong> Ha verificato l'ammissibilità del referendum — procedura ordinaria, non pronuncia sul merito della riforma.</p>
+        <div class="verdict verified">art. 134 Cost.</div>
+      </div>
+      <div class="card accent">
+        <div class="card-title">Alta Corte Disciplinare</div>
+        <p>Nuova istituzione introdotta dalla riforma. Sostituisce la sezione disciplinare del CSM. Composizione mista togati/laici. <strong>Non esiste ancora — nasce con la riforma se vince il SÌ.</strong></p>
+        <div class="verdict uncertain">introdotta dalla riforma</div>
+      </div>
+      <div class="card">
+        <div class="card-title">PM — Pubblico Ministero</div>
+        <p>Magistrato requirente: conduce le indagini e rappresenta l'accusa. In Italia l'azione penale è <strong>obbligatoria</strong> (art. 112 Cost.) — non può scegliere se perseguire un reato. Oggi appartiene allo stesso corpo dei giudici.</p>
+        <div class="verdict verified">art. 112 Cost.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Giudice (magistrato giudicante)</div>
+        <p>Decide sui casi, deve essere terzo e imparziale. Oggi appartiene allo stesso corpo dei PM con possibilità di cambio funzione. <strong>La riforma elimina questo passaggio.</strong></p>
+        <div class="verdict verified">art. 101–103 Cost.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">ANM — Associazione Nazionale Magistrati</div>
+        <p>Sindacato dei magistrati italiani (~9.000 iscritti). <strong>Non è un'istituzione dello Stato</strong> — è un'associazione di categoria privata. Si è schierata contro la riforma. Le sue dichiarazioni hanno peso politico, non valore normativo.</p>
+        <div class="verdict political">soggetto privato · posizione NO</div>
+      </div>
+      <div class="card blue">
+        <div class="card-title">Art. 138 Cost. — Referendum confermativo</div>
+        <p>Modifica costituzionale senza maggioranza dei due terzi → referendum confermativo. <strong>Nessun quorum</strong>: vince la maggioranza dei voti validi. Diverso dal referendum abrogativo (art. 75) che richiede il 50%+1 degli aventi diritto.</p>
+        <div class="verdict verified">art. 138 Cost.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Separazione delle carriere</div>
+        <p>Giudici e PM appartengono a corpi distinti, con percorsi, organi e sistemi disciplinari separati. <strong>Oggi in Italia non esiste.</strong> La riforma la introduce, allineando l'Italia a Francia, Germania, UK e Portogallo.</p>
+        <div class="verdict verified">oggetto della riforma</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Sorteggio membri laici CSM</div>
+        <p>La riforma introduce il sorteggio tra soggetti eletti dal Parlamento per i membri laici dei due nuovi CSM. Meccanismo contestato. Classificazione Orbis: <strong>parzialmente verificabile</strong> — forme di sorteggio esistono in altri sistemi, non in questa forma specifica.</p>
+        <div class="verdict uncertain">parzialmente verificabile</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-fonti" style="background:#fff;">
+  <div class="container">
+    <div class="section-label">13 · Fonti primarie</div>
+    <h2 class="section-title">Dove verificare direttamente</h2>
+    <div class="two-col">
+      <div class="sources-list">
+        <a class="source-item" href="https://www.interno.gov.it" target="_blank">
+          <span class="source-code">MIN-INT</span>Ministero dell'Interno — risultati e informazioni pratiche<span class="source-arrow">↗</span>
+        </a>
+        <a class="source-item" href="https://www.gazzettaufficiale.it" target="_blank">
+          <span class="source-code">GU</span>Gazzetta Ufficiale — testo integrale della riforma<span class="source-arrow">↗</span>
+        </a>
+        <a class="source-item" href="https://www.camera.it" target="_blank">
+          <span class="source-code">CAMERA</span>Camera dei Deputati — iter parlamentare completo<span class="source-arrow">↗</span>
+        </a>
+        <a class="source-item" href="https://www.senato.it" target="_blank">
+          <span class="source-code">SENATO</span>Senato della Repubblica — iter parlamentare completo<span class="source-arrow">↗</span>
+        </a>
+        <a class="source-item" href="https://www.cortecostituzionale.it" target="_blank">
+          <span class="source-code">CORTE COST.</span>Corte Costituzionale — ammissibilità referendum<span class="source-arrow">↗</span>
+        </a>
+        <a class="source-item" href="https://www.sondaggipoliticoelettorali.it" target="_blank">
+          <span class="source-code">MIMIT</span>Registro ufficiale sondaggi elettorali<span class="source-arrow">↗</span>
+        </a>
+      </div>
+      <div>
+        <div class="card accent">
+          <div class="card-title">Precedenti · Referendum 2022</div>
+          <p>Nel 2022 si sono tenuti cinque referendum sulla giustizia. Affluenza circa 21%. Nessuno raggiunse il quorum (50%+1). Il referendum confermativo 2026 non prevede quorum.</p>
+          <div class="verdict verified">verificato</div>
+        </div>
+        <div class="card mt-24">
+          <div class="card-title">Compliance · Silenzio elettorale</div>
+          <p>Nei giorni precedenti al voto è vietata ogni forma di propaganda elettorale. Orbis monitora il timing delle proprie pubblicazioni e non produce contenuti con finalità persuasive.</p>
+          <p class="mt-16" style="font-size:13px;color:#888;">Questo documento è classificato: <span class="mono" style="font-size:11px;">ANALISI FATTUALE</span> — non propaganda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 POSIZIONE ORBIS -->
+<section style="border-bottom:none;">
+  <div class="container">
+    <div class="section-label">14 · Posizione Orbis</div>
+    <div style="max-width:640px;">
+      <h2 class="section-title">Orbis non esprime posizioni politiche</h2>
+      <p style="font-size:15px;line-height:1.75;color:#333;">Questo modulo analizza le informazioni disponibili, ne verifica la coerenza rispetto alle fonti primarie e traduce i possibili effetti in scenari comprensibili. Non indica come votare. Non produce propaganda. Non è finanziato da partiti o organizzazioni con interessi nel risultato.</p>
+      <p class="mt-24" style="font-size:14px;color:#666;line-height:1.7;">Gli scenari non sono previsioni certe. Le interpretazioni dell'impatto normativo possono variare tra esperti qualificati. Per qualsiasi decisione, Orbis raccomanda la lettura diretta del testo normativo e la consultazione di fonti istituzionali ufficiali.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Torna su">↑</button>
+
+<!-- TIMELINE RIFORMA -->
+<section id="sec-timeline" style="background:#fafaf8;">
+  <div class="container">
+    <div class="section-label" style="color:#444;">15 · Timeline — iter della riforma</div>
+    <h2 class="section-title" style="color:#222;">Dal programma elettorale al referendum</h2>
+    <p style="font-size:14px;color:#555;margin-bottom:36px;max-width:640px;">Cronologia verificata degli eventi che hanno portato al voto del 22–23 marzo 2026.</p>
+    <div class="two-col">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">Set 2022</div>
+            <div class="tl-title">Programma elettorale centrodestra</div>
+            <div class="tl-desc">La coalizione inserisce la separazione delle carriere nel punto 3 del programma. Vittoria elettorale del 25 settembre.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">Ott 2022</div>
+            <div class="tl-title">Governo Meloni — Nordio al Ministero Giustizia</div>
+            <div class="tl-desc">Carlo Nordio, ex magistrato, nominato Ministro della Giustizia. Avvio iter della riforma.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">2023–2024</div>
+            <div class="tl-title">Iter parlamentare</div>
+            <div class="tl-desc">Quattro letture tra Camera e Senato. La riforma modifica 7 articoli della Costituzione. Approvata senza la maggioranza dei due terzi — si apre la strada al referendum.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">30 Ott 2025</div>
+            <div class="tl-title">Quarta e ultima lettura parlamentare</div>
+            <div class="tl-desc">Approvazione definitiva. I capigruppo di maggioranza avviano la raccolta di firme per richiedere il referendum.</div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">Gen 2026</div>
+            <div class="tl-title">Decreto del Presidente della Repubblica</div>
+            <div class="tl-desc">Mattarella firma il decreto di indizione. La Gazzetta Ufficiale del 14 gennaio 2026 fissa le date: 22–23 marzo 2026.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">6 Feb 2026</div>
+            <div class="tl-title">Nuovo quesito referendario</div>
+            <div class="tl-desc">La Cassazione accoglie il quesito riformulato dai 15 giuristi promotori. Il Quirinale integra il decreto con gli articoli modificati.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot done">✓</div>
+          <div>
+            <div class="tl-date">7 Mar 2026</div>
+            <div class="tl-title">Inizio silenzio elettorale sondaggi</div>
+            <div class="tl-desc">La legge vieta la pubblicazione di sondaggi nei 15 giorni precedenti il voto. Questa sezione Orbis si sospende automaticamente.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot key">▶</div>
+          <div>
+            <div class="tl-date">22–23 Mar 2026</div>
+            <div class="tl-title">Referendum costituzionale</div>
+            <div class="tl-desc">Seggi aperti domenica 7:00–23:00, lunedì 7:00–15:00. Scrutinio dalle 15:00 del 23 marzo. Risultati ufficiali su Ministero dell'Interno.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#0a0c0f;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+
+    <!-- TOP ROW -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;padding:48px 0 40px;border-bottom:1px solid rgba(255,255,255,.08);">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.25em;color:rgba(255,255,255,.25);margin-bottom:12px;">PROGETTO</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:600;letter-spacing:.15em;color:var(--paper);margin-bottom:4px;">ORBIS</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.15em;color:rgba(255,255,255,.35);">Intelligence · MC Project Lab</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.65;margin-top:16px;">Sistema indipendente di analisi e verifica delle informazioni pubbliche.</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.25em;color:rgba(255,255,255,.25);margin-bottom:12px;">MODULO</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--paper);margin-bottom:12px;font-weight:300;">Referendum sulla Giustizia 2026</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.3);line-height:2;">
+          MOD.RF-IT-01<br>
+          Metodo v1.0<br>
+          Posizione: indipendente<br>
+          Finanziamento: nessuno
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.25em;color:rgba(255,255,255,.25);margin-bottom:12px;">CONTATTI</div>
+        <a href="mailto:info@orbis.mcprojectlab.it" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(255,255,255,.6);text-decoration:none;letter-spacing:.05em;display:block;margin-bottom:8px;">info@orbis.mcprojectlab.it</a>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.25);margin-top:16px;line-height:1.8;">
+          Risultati referendum:<br>
+          <a href="https://elezioni.interno.gov.it" target="_blank" style="color:rgba(255,255,255,.4);text-decoration:none;">elezioni.interno.gov.it ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:16px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.2);letter-spacing:.08em;">
+        © Orbis Intelligence · MC Project Lab · orbis.mcprojectlab.it
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,.15);letter-spacing:.08em;">
+        Dati: fonti primarie pubbliche · Nessuna affiliazione politica
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+// ── LAST UPDATE TIMESTAMP ──
+function setLastUpdate() {
+  const el = document.getElementById('last-update-ts');
+  if (!el) return;
+  const now = new Date();
+  el.textContent = now.toLocaleString('it-IT', {day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+}
+setLastUpdate();
+
+// ── TIMESTAMP TOPBAR ──
+function updateTime() {
+  const el = document.querySelector('.topbar .ts');
+  if (!el) return;
+  const now = new Date();
+  const ts = now.toLocaleString('it-IT', {day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  el.textContent = `MOD.RF-IT-01 · Agg. ${ts}`;
+}
+updateTime();
+setInterval(updateTime, 60000);
+
+// ── TIMESTAMPS ANALISI ──
+function setAnalysisTimestamps() {
+  const now = new Date();
+  const ts = now.toLocaleDateString('it-IT', {day:'2-digit',month:'2-digit',year:'numeric'});
+  document.querySelectorAll('.analysis-ts').forEach(el => el.textContent = ts);
+  const mts = document.getElementById('method-ts');
+  if (mts) mts.textContent = ts;
+}
+setAnalysisTimestamps();
+
+// ── COUNTDOWN ──
+const VOTE_START = new Date('2026-03-22T07:00:00');
+const VOTE_END   = new Date('2026-03-23T15:00:00');
+
+function updateCountdown() {
+  const now   = new Date();
+  const units = document.getElementById('countdown-units');
+  if (!units) return;
+  if (now >= VOTE_END) {
+    units.innerHTML = '<span class="countdown-expired">Votazione conclusa — risultati su Ministero dell\'Interno</span>';
+    return;
+  }
+  if (now >= VOTE_START) {
+    units.innerHTML = '<span class="countdown-expired">Votazione in corso · Seggi aperti</span>';
+    return;
+  }
+  const diff  = VOTE_START - now;
+  const days  = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins  = Math.floor((diff % 3600000) / 60000);
+  const secs  = Math.floor((diff % 60000) / 1000);
+  const pad   = n => String(n).padStart(2,'0');
+  document.getElementById('cd-days').textContent  = days;
+  document.getElementById('cd-hours').textContent = pad(hours);
+  document.getElementById('cd-min').textContent   = pad(mins);
+  document.getElementById('cd-sec').textContent   = pad(secs);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ── NEWS FEED ──
+const RSS_SOURCES = [
+  { url:'https://www.repubblica.it/rss/politica/rss2.0.xml', name:'Repubblica' },
+  { url:'https://www.corriere.it/rss/politica.xml',          name:'Corriere' },
+  { url:'https://www.ansa.it/sito/ansait_rss.xml',           name:'ANSA' },
+];
+function timeAgo(date) {
+  const diff = Math.floor((Date.now() - date) / 60000);
+  if (diff < 1)  return 'ora';
+  if (diff < 60) return `${diff}m fa`;
+  const h = Math.floor(diff / 60);
+  if (h < 24)    return `${h}h fa`;
+  return `${Math.floor(h/24)}g fa`;
+}
+async function fetchFeed(src) {
+  const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(src.url)}`;
+  const r = await fetch(proxy, { signal: AbortSignal.timeout(7000) });
+  const j = await r.json();
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(j.contents, 'text/xml');
+  return [...xml.querySelectorAll('item')].slice(0,4).map(it => ({
+    title:  it.querySelector('title')?.textContent?.trim() || '',
+    link:   it.querySelector('link')?.textContent?.trim()  || '#',
+    date:   new Date(it.querySelector('pubDate')?.textContent || Date.now()),
+    source: src.name
+  }));
+}
+async function loadNews() {
+  const feed = document.getElementById('news-feed');
+  if (!feed) return;
+  try {
+    const results = await Promise.allSettled(RSS_SOURCES.map(fetchFeed));
+    let items = [];
+    results.forEach(r => { if (r.status==='fulfilled') items.push(...r.value); });
+    const kw = ['referendum','giustizia','magistratura','separazione carriere','csm','riforma'];
+    let filtered = items.filter(it => kw.some(k => it.title.toLowerCase().includes(k)));
+    if (filtered.length < 3) filtered = items;
+    filtered.sort((a,b) => b.date - a.date);
+    filtered = filtered.slice(0,8);
+    if (!filtered.length) throw new Error('empty');
+    feed.innerHTML = filtered.map(it => `
+      <a class="news-item" href="${it.link}" target="_blank" rel="noopener">
+        <div class="news-time">${timeAgo(it.date)}<div class="news-source">${it.source}</div></div>
+        <div class="news-title">${it.title}</div>
+        <span style="color:var(--muted);font-size:12px;padding-top:2px;">↗</span>
+      </a>`).join('');
+  } catch(e) {
+    feed.innerHTML = `<div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);padding:16px 0;">
+      Feed non disponibile.<br><a href="https://www.ansa.it" target="_blank" style="color:var(--accent2);">Consulta ANSA.it →</a></div>`;
+  }
+}
+loadNews();
+setInterval(loadNews, 600000);
+
+// ── SONDAGGI ──
+const SILENZIO_START = new Date('2026-03-07T00:00:00');
+const ISTITUTI = [
+  { id:'demos', name:'Demos & Pi',    rss:'https://www.demos.it/feed/',            site:'https://www.demos.it' },
+  { id:'swg',   name:'SWG',          rss:'https://www.swg.it/feed/',              site:'https://www.swg.it' },
+  { id:'tecne', name:'Tecnè',        rss:'https://tecne.eu/feed/',                site:'https://tecne.eu' },
+  { id:'emg',   name:'EMG Different',rss:'https://www.emg.it/feed/',              site:'https://www.emg.it' },
+  { id:'ipsos', name:'Ipsos Italia', rss:'https://www.ipsos.com/it-it/rss.xml',   site:'https://www.ipsos.com/it-it' },
+  { id:'euro',  name:'Euromedia',    rss:'https://euromediaresearch.it/feed/',    site:'https://euromediaresearch.it' },
+];
+const POLL_KW = ['referendum','giustizia','magistratura','separazione','csm','carriere','sondaggio','riforma'];
+
+function isSilenzio() {
+  const now = new Date();
+  return now >= SILENZIO_START && now < VOTE_END;
+}
+
+async function fetchPollFeed(ist) {
+  const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(ist.rss)}`;
+  const r = await fetch(proxy, { signal: AbortSignal.timeout(7000) });
+  const j = await r.json();
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(j.contents, 'text/xml');
+  return [...xml.querySelectorAll('item')]
+    .filter(it => POLL_KW.some(k => (it.querySelector('title')?.textContent||'').toLowerCase().includes(k)))
+    .slice(0,3)
+    .map(it => ({
+      title: it.querySelector('title')?.textContent?.trim() || '',
+      link:  it.querySelector('link')?.textContent?.trim()  || ist.site,
+      date:  new Date(it.querySelector('pubDate')?.textContent || Date.now()),
+      src:   ist.name
+    }));
+}
+
+async function loadPolls(forceRefresh) {
+  const feedEl = document.getElementById('poll-feed');
+  const lastEl = document.getElementById('poll-last-update');
+  if (!feedEl) return;
+
+  if (isSilenzio()) {
+    feedEl.innerHTML = `<div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);padding:20px 0;border-top:1px solid var(--border);">
+      ⚠ SILENZIO ELETTORALE ATTIVO<br>
+      <span style="color:var(--muted);font-size:11px;margin-top:6px;display:block;">L. 28/2000 art. 8 — divieto pubblicazione sondaggi nei 15 giorni precedenti il voto.<br>Questa sezione riprenderà automaticamente dopo la chiusura dei seggi.</span></div>`;
+    return;
+  }
+
+  const CACHE_KEY = 'orbis_polls_v3';
+  const CACHE_TS  = 'orbis_polls_v3_ts';
+  if (!forceRefresh) {
+    try {
+      const cached = sessionStorage.getItem(CACHE_KEY);
+      const ts     = sessionStorage.getItem(CACHE_TS);
+      if (cached && ts && (Date.now() - parseInt(ts)) < 86400000) {
+        renderPolls(JSON.parse(cached), new Date(parseInt(ts)));
+        return;
+      }
+    } catch(e) {}
+  }
+
+  feedEl.innerHTML = '<div class="news-loading">Ricerca sondaggi in corso…</div>';
+  const results = await Promise.allSettled(ISTITUTI.map(fetchPollFeed));
+  let all = [];
+  results.forEach(r => { if (r.status==='fulfilled') all.push(...r.value); });
+  all.sort((a,b) => b.date - a.date);
+  try {
+    sessionStorage.setItem(CACHE_KEY, JSON.stringify(all));
+    sessionStorage.setItem(CACHE_TS, Date.now().toString());
+  } catch(e) {}
+  renderPolls(all, new Date());
+}
+
+function renderPolls(items, ts) {
+  const feedEl = document.getElementById('poll-feed');
+  const lastEl = document.getElementById('poll-last-update');
+  if (lastEl) lastEl.textContent = `Ultimo aggiornamento: ${ts.toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}`;
+  if (!items || !items.length) {
+    feedEl.innerHTML = `<div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);padding:16px 0;">
+      Nessuna rilevazione recente trovata.<br>
+      <a href="https://www.sondaggipoliticoelettorali.it" target="_blank" style="color:var(--accent2);">Registro ufficiale sondaggi →</a></div>`;
+    return;
+  }
+  feedEl.innerHTML = items.slice(0,10).map(it => `
+    <a class="news-item" href="${it.link}" target="_blank" rel="noopener">
+      <div class="news-time">${timeAgo(it.date)}<div class="news-source">${it.src}</div></div>
+      <div class="news-title">${it.title.substring(0,120)}${it.title.length>120?'…':''}</div>
+      <span style="color:var(--muted);font-size:12px;padding-top:2px;">↗</span>
+    </a>`).join('');
+}
+
+window.loadPolls = loadPolls;
+document.getElementById('poll-refresh-btn').addEventListener('click', () => loadPolls(true));
+loadPolls(false);
+setInterval(() => loadPolls(false), 86400000);
+
+// ── AFFLUENZA ──
+const AFFLUENZA = [
+  { anno:'2026 (conf.)',        pct:null, note:'Nessun quorum richiesto',     label:'—' },
+  { anno:'2022 (5 quesiti)',    pct:20.9, note:'Quorum non raggiunto',        label:'20.9%' },
+  { anno:'2016 (cost.)',        pct:65.5, note:'Quorum raggiunto · NO vince', label:'65.5%' },
+  { anno:'2011 (acqua/nucl.)', pct:57.0, note:'Quorum raggiunto',            label:'57.0%' },
+  { anno:'2005 (PMA)',          pct:25.9, note:'Quorum non raggiunto',        label:'25.9%' },
+  { anno:'1995 (giustizia)',    pct:57.0, note:'Quorum raggiunto',            label:'57.0%' },
+];
+function buildChart() {
+  const el = document.getElementById('aff-chart');
+  if (!el) return;
+  el.innerHTML = AFFLUENZA.map(d => {
+    const color = !d.pct ? 'var(--accent)' : d.pct>=50 ? 'var(--verified)' : 'var(--uncertain)';
+    return `<div class="aff-row">
+      <div><div class="aff-year">${d.anno}</div><div class="aff-note">${d.note}</div></div>
+      <div class="aff-bar-wrap"><div class="aff-bar" data-w="${d.pct||0}" style="background:${color}"></div></div>
+      <div class="aff-pct" style="color:${color}">${d.label}</div>
+    </div>`;
+  }).join('');
+  const barObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.aff-bar').forEach(b => { b.style.width = b.dataset.w + '%'; });
+        barObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  barObs.observe(el);
+}
+buildChart();
+
+// ── RISULTATI BAR (si attiva dopo chiusura seggi) ──
+function checkRisultati() {
+  const now = new Date();
+  const bar = document.getElementById('risultati-bar');
+  if (bar && now >= VOTE_END) {
+    bar.style.display = 'block';
+  }
+}
+checkRisultati();
+setInterval(checkRisultati, 30000);
+
+// ── NAV LATERALE ATTIVA ──
+function updateNav() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.subnav a');
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top <= window.innerHeight * 0.4) current = sec.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.dataset.sec === current);
+  });
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
+
+// ── NAV SMOOTH SCROLL (override anchor behavior) ──
+document.querySelectorAll('.subnav a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) {
+      const offset = 80; // topbar + subnav height
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+const backTop = document.getElementById('back-top');
+window.addEventListener('scroll', () => {
+  if (backTop) backTop.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+// ── SHARE COPY LINK ──
+const shareBtn = document.getElementById('share-copy');
+if (shareBtn) {
+  shareBtn.addEventListener('click', () => {
+    const url = window.location.href;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        shareBtn.textContent = '✓ Copiato!';
+        shareBtn.classList.add('copied');
+        setTimeout(() => {
+          shareBtn.textContent = '⎘ Copia link';
+          shareBtn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  });
+}
+
+// ── SCROLL FADE-IN ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('section').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
